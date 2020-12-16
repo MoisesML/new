@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.persona_router = void 0;
+const express_1 = require("express");
+const persona_1 = require("../controllers/persona");
+exports.persona_router = express_1.Router();
+exports.persona_router.post('/registro', persona_1.crearPersona);
+exports.persona_router.post('/login', persona_1.loginPersona);
+exports.persona_router.get('/personas', persona_1.devolverPersonas);
+exports.persona_router.get('/persona/:id', persona_1.devolverPersona);
